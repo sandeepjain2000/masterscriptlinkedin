@@ -96,7 +96,7 @@ SUITE_LOG    = os.path.join(LOG_DIR, f"linkedin_suite_{datetime.now().strftime('
 MARIONETTE_PORT = 2828
 
 # Child scripts and data live under SmallNotFrequent (moved from Claudes root)
-SMALL_NOT_FREQUENT   = r"C:\Users\sandeep\Downloads\Claudes\SmallNotFrequent"
+SMALL_NOT_FREQUENT   = os.path.join(str(_claudes), "SmallNotFrequent")
 
 # Absolute paths to the existing SQLite databases (unchanged from originals)
 COMMENTS_DB  = os.path.join(SMALL_NOT_FREQUENT, "LinkedIn_Like", "Working", "linkedin_ai_comments.db")
@@ -385,7 +385,7 @@ def get_like_search_url():
         "sortBy":     "date_posted",
     }, quote_via=urllib.parse.quote)
     return f"https://www.linkedin.com/search/results/content/?{params}"
-MAX_LIKES_PER_RUN    = 20
+MAX_LIKES_PER_RUN    = 2
 MAX_SCROLL_ROUNDS    = 40
 BETWEEN_LIKES_MIN    = 6.0
 BETWEEN_LIKES_MAX    = 14.0

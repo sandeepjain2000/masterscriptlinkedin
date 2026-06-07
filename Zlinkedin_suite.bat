@@ -1,8 +1,9 @@
 @echo off
 setlocal
 
-set BASE_DIR=C:\Users\sandeep\Downloads\Claudes
-set SUITE_DIR=%BASE_DIR%\Script_to_run_all_LinkedIn_Instagram_scripts
+set SUITE_DIR=%~dp0
+set "SUITE_DIR=%SUITE_DIR:~0,-1%"
+set BASE_DIR=%SUITE_DIR%\..
 set FIREFOX=C:\Program Files\Mozilla Firefox\firefox.exe
 set LINKEDIN_URL=https://www.linkedin.com/feed/
 
